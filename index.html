@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Notes — Professional</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="app-header">
+      <div class="brand">
+        <h1>Notes</h1>
+        <p class="subtitle">Clean. Simple. Professional.</p>
+      </div>
+
+      <div class="controls">
+        <input id="search" class="search" type="search" placeholder="Search notes..." aria-label="Search notes">
+        <button id="clearAll" class="btn btn-ghost" title="Delete all notes">Clear All</button>
+      </div>
+    </header>
+
+    <section class="editor">
+      <form id="noteForm" aria-label="Add or edit note">
+        <input id="title" class="input" type="text" placeholder="Title" maxlength="80" required>
+        <textarea id="content" class="textarea" placeholder="Write your note..." rows="6" required></textarea>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary" id="saveBtn">Save Note</button>
+          <button type="button" class="btn btn-secondary" id="cancelBtn" hidden>Cancel</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="section-title">Your Notes</h2>
+      <div id="notesList" class="notes-list" aria-live="polite"></div>
+      <p id="emptyState" class="empty">No notes yet — add your first note above.</p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
